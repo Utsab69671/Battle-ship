@@ -1,0 +1,224 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+  }
+
+h1 {
+    font-size: 60px;
+    margin: 10px 10px 20px 10px;
+}
+
+#menu {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  height: 540px;
+  width: 960px;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  border: 5px solid black;
+}
+
+#easy {
+  width: 45px;
+  padding-left: 8px;;
+}
+#normal {
+  width: 55px;
+  padding-left: 8px;;
+}
+#hard {
+  width: 55px;
+  padding-left: 8px;;
+}
+ 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}  
+
+body * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid lightgrey; */
+  }
+
+.board {
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    height: 350px;
+    width: 350px;
+  }
+
+.board div {
+    border: 1px solid lightgrey;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+#container {
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 25px;
+    z-index: 0;
+    visibility: hidden;
+}  
+
+#infoPanel {
+  height: 350px;
+  width: 180px;
+  flex-direction: column;
+}
+
+#info1, #info2, #info3 {
+  width: 180px;
+  height: 30px;
+}
+
+#lowerPanel {
+  height: 300px;
+  width: 900px;
+  justify-content: space-between;
+  font-size: 35px;
+  z-index: 0;
+  visibility: hidden;
+}
+
+#pInfo, #aiInfo {
+  height: 300px;
+  width: 320px;
+  flex-direction: column;
+}
+
+#pMessage1, #pMessage2, #aiMessage1, #aiMessage2 {
+  height: 30px;
+  width: 320px;
+}
+
+#pShips {
+  height: 200px;
+  width: 320px;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  padding-left: 15px;
+}
+
+#aiShips {
+  height: 200px;
+  width: 320px;
+  justify-content: space-evenly;
+  padding-right: 15px;
+}
+
+.ship {
+
+}
+
+#pShip0, #aiShip0 {
+  height: 180px;
+  width: 47px;
+}
+#pShip1, #aiShip1 {
+  height: 140px;
+  width: 45px;
+}
+#pShip2, #aiShip2, #pShip3, #aiShip3 {
+  height: 100px;
+  width: 35px;
+}
+
+#pShip4, #aiShip4 {
+  height: 65px;
+  width: 35px;
+}
+
+/* 8BIT BUTTON TEMPATE TAKEN FROM https://www.daddydesign.com/wordpress/updated-how-to-make-digital-8-bit-style-corners-using-only-css/ */
+.button {
+  width: 70px;
+  float: left;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  position: relative;
+  margin-top: 55px;
+  box-sizing: border-box;
+  background-color: rgba(211,211,211,0.5);
+  }
+   
+.button .buttonWrap{
+  cursor: pointer;
+  display: block;
+  color: white;
+  padding: 2px;
+  margin: -6px 0;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  }
+
+  .button::before,
+  .button::after,
+  .button .buttonWrap::before,
+  .button .buttonWrap::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  background: white;
+  } 
+  .button::before{ top: -5px; left: -1px; }
+  .button::after{ top: -5px; right: -1px; }
+  .button .buttonWrap::before{ bottom: -5px; left: -1px; }
+  .button .buttonWrap::after{ bottom: -5px; right: -1px; }
+
+
+
+  #restart::before,
+  #restart::after,
+  #restart #restartWrap::before,
+  #restart #restartWrap::after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  background: rgb(70 245 113);
+  }
+
+  #restart {
+    width: 130px;
+    float: left;
+    border-left: 4px solid rgb(70 245 113);
+    border-right: 4px solid rgb(70 245 113);
+    position: relative;
+    margin-top: 55px;
+    box-sizing: border-box;
+    background-color: white;
+    color: rgb(70 245 113);
+    border-top: 2px solid rgb(70 245 113);
+    border-bottom: 2px solid rgb(70 245 113);
+    cursor: pointer;
+    display: block;
+    padding: 2px; 
+    }
+     
+  #restartWrap{
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    color: rgb(70 245 113);
+    padding: 2px;
+    margin: -6px 0;
+    border-top: 2px solid rgb(70 245 113);
+    border-bottom: 2px solid rgb(70 245 113);
+    }
